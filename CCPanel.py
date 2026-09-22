@@ -1,4 +1,10 @@
-print("Hello world")
+ class School:
+    School_name = "ABC School"
 
-print("This is test massage")
-
+    @staticmethod
+    def calculate_grade(marks)
+      if marks >= 90:
+        return 'A+'
+      else: 
+        return "F"
+      print(School.calculate_grade(94))
