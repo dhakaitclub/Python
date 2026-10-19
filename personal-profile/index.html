@@ -1,1 +1,288 @@
+<!DOCTYPE html>
+<!-- 1. STRUCTURAL TAGS: html, head, title, body -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile</title>
 
+    <!-- A little CSS so the page looks tidy (optional for the assignment) -->
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            color: #222;
+            background-color: #fafafa;
+        }
+        header {
+            border-bottom: 3px solid #2a6f97;
+            padding: 20px 0 10px;
+        }
+        header h1 {
+            margin: 0;
+            color: #2a6f97;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        nav a {
+            color: #2a6f97;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin: 32px 0;
+        }
+        h2 {
+            color: #2a6f97;
+            border-left: 5px solid #2a6f97;
+            padding-left: 10px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #2a6f97;
+            color: white;
+        }
+        form label {
+            display: block;
+            margin-top: 12px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            max-width: 350px;
+            padding: 6px;
+        }
+        button, input[type="submit"] {
+            margin-top: 14px;
+            padding: 8px 18px;
+            background-color: #2a6f97;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        details {
+            background: #eef4f8;
+            padding: 10px 14px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        footer {
+            border-top: 1px solid #ccc;
+            text-align: center;
+            padding: 16px 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 6. SEMANTIC ELEMENT: header -->
+    <header>
+        <h1>Rahim Ahmed</h1>
+        <p>Computer Science Student | Web Development Learner</p>
+
+        <!-- 6. SEMANTIC ELEMENT: nav -->
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#more">More About Me</a></li>
+                <li><a href="#contact">Contact Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 6. SEMANTIC ELEMENT: main -->
+    <main>
+
+        <!-- About Me section -->
+        <section id="about">
+            <h2>About Me</h2>
+
+            <!-- 5. MULTIMEDIA: image -->
+            <img src="https://picsum.photos/id/1005/400/300" alt="Profile photo of Rahim Ahmed" width="400" height="300">
+
+            <!-- 1. Paragraph about yourself -->
+            <!-- 2. TEXT FORMATTING: bold, italic, underline, highlight -->
+            <p>
+                Hello! My name is <b>Rahim Ahmed</b>. I am a
+                <i>second-year Computer Science student</i> who enjoys building
+                websites and solving problems with code. My current goal is to
+                <u>become a skilled full-stack web developer</u>.
+                Right now I am learning <mark>HTML, CSS, and JavaScript</mark>.
+            </p>
+            <p>
+                Outside of studying, I like reading, playing cricket, and
+                exploring new technology. I believe <strong>consistent practice</strong>
+                is the key to <em>getting better every day</em>.
+            </p>
+        </section>
+
+        <!-- 4. TABLE: academic information (3+ rows, 3+ columns) -->
+        <section id="academics">
+            <h2>Academic Information</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Institution</th>
+                        <th>Year</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SSC</td>
+                        <td>Dhaka Ideal School</td>
+                        <td>2021</td>
+                        <td>GPA 5.00</td>
+                    </tr>
+                    <tr>
+                        <td>HSC</td>
+                        <td>Dhaka City College</td>
+                        <td>2023</td>
+                        <td>GPA 5.00</td>
+                    </tr>
+                    <tr>
+                        <td>BSc in CSE</td>
+                        <td>XYZ University</td>
+                        <td>2024 – Present</td>
+                        <td>CGPA 3.75 (ongoing)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 5. MULTIMEDIA: audio and video -->
+        <section id="media">
+            <h2>Multimedia</h2>
+
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>Video</h3>
+            <video width="400" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+
+        <!-- 7. INTERACTIVE ELEMENTS: details/summary and a button -->
+        <section id="more">
+            <h2>More About Me</h2>
+
+            <details>
+                <summary>My Skills</summary>
+                <ul>
+                    <li>HTML and CSS</li>
+                    <li>Basic JavaScript</li>
+                    <li>C and Python programming</li>
+                    <li>Microsoft Office</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>My Goals</summary>
+                <p>I want to complete my degree with good results, build real
+                projects, and work as a web developer at a software company.</p>
+            </details>
+
+            <details>
+                <summary>Fun Facts</summary>
+                <p>I can solve a Rubik's cube in under two minutes, and my
+                favourite food is biryani.</p>
+            </details>
+
+            <!-- Clickable button -->
+            <button type="button" onclick="alert('Thanks for visiting my profile!')">
+                Say hello
+            </button>
+        </section>
+
+        <!-- 3. FORM: name, email, password, gender, hobbies, submit -->
+        <section id="contact">
+            <h2>Contact Form</h2>
+            <form action="#" method="post">
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter a password" required>
+
+                <p>Gender:</p>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male" style="display:inline">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female" style="display:inline">Female</label>
+
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other" style="display:inline">Other</label>
+
+                <p>Hobbies:</p>
+                <input type="checkbox" id="reading" name="hobbies" value="reading">
+                <label for="reading" style="display:inline">Reading</label>
+
+                <input type="checkbox" id="sports" name="hobbies" value="sports">
+                <label for="sports" style="display:inline">Sports</label>
+
+                <input type="checkbox" id="music" name="hobbies" value="music">
+                <label for="music" style="display:inline">Music</label>
+
+                <input type="checkbox" id="coding" name="hobbies" value="coding">
+                <label for="coding" style="display:inline">Coding</label>
+
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+    </main>
+
+    <!-- 6. SEMANTIC ELEMENT: footer -->
+    <footer>
+        <p>&copy; 2026 Rahim Ahmed. All rights reserved.</p>
+        <p>Contact: rahim.ahmed@example.com</p>
+    </footer>
+
+</body>
+</html>
